@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7b18f7b-c62c-49ed-8bae-f9065f24b04f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/felipeazsantos/restaurant/dao/DishDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/felipeazsantos/restaurant/entity/Dish.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/felipeazsantos/restaurant/service/test/DishService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/felipeazsantos/restaurant/util/JPAUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/felipeazsantos/restaurant/dao/DishDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/felipeazsantos/restaurant/dao/DishDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/felipeazsantos/restaurant/service/test/DishService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/felipeazsantos/restaurant/service/test/DishService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

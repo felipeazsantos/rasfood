@@ -16,12 +16,30 @@ public class DishService {
         risotto.setAvailable(true);
         risotto.setPrice(BigDecimal.valueOf(88.50));
 
+        Dish salmon = new Dish();
+        salmon.setName("salmon in passion fruit sauce");
+        salmon.setDescription("grilled salmon with passion fruit sauce");
+        salmon.setAvailable(true);
+        salmon.setPrice(BigDecimal.valueOf(60));
+
         EntityManager entityManager = JPAUtil.getEntityManagerJpaH2();
         DishDao dishDao = new DishDao(entityManager);
         entityManager.getTransaction().begin();
         dishDao.register(risotto);
-        entityManager.getTransaction().commit();
-        entityManager.close();
+        entityManager.flush();
+        dishDao.register(salmon);
+        entityManager.flush();
+        System.out.println("the dish sought was: " + dishDao.findById(2L));
 
+        dishDao.remove(salmon);
+        entityManager.flush();
+        System.out.println("the dish sought was: " + dishDao.findById(2L));
+
+        entityManager.clear();
+        risotto.setPrice(BigDecimal.valueOf(75.50));
+        dishDao.update(risotto);
+        entityManager.flush();
+
+        System.out.println("the dish sought was: " + dishDao.findById(1L));
     }
 }

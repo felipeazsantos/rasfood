@@ -12,8 +12,20 @@ public class DishDao {
         this.entityManager = entityManager;
     }
 
-    public void register(Dish dish) {
+    public void register(final Dish dish) {
         this.entityManager.persist(dish);
         System.out.println("Entity registered: " + dish);
+    }
+
+    public Dish findById(final Long id) {
+        return this.entityManager.find(Dish.class, id);
+    }
+
+    public void update(final Dish dish) {
+        this.entityManager.merge(dish);
+    }
+
+    public void remove(final Dish dish) {
+        this.entityManager.remove(dish);
     }
 }
