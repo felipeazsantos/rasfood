@@ -1,2 +1,2 @@
 # rasfood
-Project JPA Hibernates that register menu items and store order history
+Project JPA Hibernates that register menuItem items and store order history

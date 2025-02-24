@@ -7,8 +7,8 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "dishes")
-public class Dish {
+@Table(name = "menu_item")
+public class MenuItem {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,13 +20,16 @@ public class Dish {
     private Boolean available;
     private BigDecimal price;
 
+    @ManyToOne
+    private Category category;
+
     @CreationTimestamp
     private LocalDateTime creationDate = LocalDateTime.now();
 
-    public Dish() {
+    public MenuItem() {
     }
 
-    public Dish(Long id, String name, String description, Boolean available, BigDecimal price, LocalDateTime creationDate) {
+    public MenuItem(Long id, String name, String description, Boolean available, BigDecimal price, LocalDateTime creationDate) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -83,14 +86,23 @@ public class Dish {
         this.creationDate = creationDate;
     }
 
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
+
     @Override
     public String toString() {
-        return "Dish{" +
+        return "MenuItem{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
                 ", available=" + available +
                 ", price=" + price +
+                ", category=" + category +
                 ", creationDate=" + creationDate +
                 '}';
     }

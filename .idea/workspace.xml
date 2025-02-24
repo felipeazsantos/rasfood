@@ -5,9 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7b18f7b-c62c-49ed-8bae-f9065f24b04f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/felipeazsantos/restaurant/dao/CategoryDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/felipeazsantos/restaurant/dao/MenuItemDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/felipeazsantos/restaurant/entity/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/felipeazsantos/restaurant/util/DataLoadUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/felipeazsantos/restaurant/dao/DishDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/felipeazsantos/restaurant/dao/DishDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/felipeazsantos/restaurant/service/test/DishService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/felipeazsantos/restaurant/service/test/DishService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/felipeazsantos/restaurant/dao/DishDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/felipeazsantos/restaurant/entity/Dish.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/felipeazsantos/restaurant/entity/MenuItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/felipeazsantos/restaurant/service/test/DishService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/felipeazsantos/restaurant/service/test/MenuService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +46,7 @@
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "Application.DishService.executor": "Run",
+    "Application.MenuService.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
@@ -46,8 +54,8 @@
   }
 }]]></component>
   <component name="RunManager">
-    <configuration name="DishService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="dev.felipeazsantos.restaurant.service.test.DishService" />
+    <configuration name="MenuService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="dev.felipeazsantos.restaurant.service.test.MenuService" />
       <module name="rasfood" />
       <extension name="coverage">
         <pattern>
@@ -61,7 +69,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.DishService" />
+        <item itemvalue="Application.MenuService" />
       </list>
     </recent_temporary>
   </component>
