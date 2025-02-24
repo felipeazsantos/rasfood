@@ -16,14 +16,12 @@ public class DataLoadUtil {
         Category entry = new Category("entry");
         Category salad = new Category("salad");
 
-        entityManager.getTransaction().begin();
         categoryDao.register(mainDish);
         entityManager.flush();
         categoryDao.register(entry);
         entityManager.flush();
         categoryDao.register(salad);
         entityManager.flush();
-        entityManager.getTransaction().commit();
         entityManager.clear();
     }
 
@@ -46,8 +44,6 @@ public class DataLoadUtil {
         salmon.setCategory(category);
 
         MenuItemDao menuItemDao = new MenuItemDao(entityManager);
-        entityManager.getTransaction().begin();
-
         menuItemDao.register(risotto);
         entityManager.flush();
 
@@ -55,7 +51,7 @@ public class DataLoadUtil {
         entityManager.flush();
 //        System.out.println("the MenuItem sought was: " + menuItemDao.findById(1L));
 //        System.out.println("the MenuItem sought was: " + menuItemDao.findById(2L));
-        menuItemDao.findAll().forEach(element -> System.out.println("the MenuItem sought was: " + element));
+//        menuItemDao.findAll().forEach(element -> System.out.println("the MenuItem sought was: " + element));
         entityManager.clear();
 
     }
