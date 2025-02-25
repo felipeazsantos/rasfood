@@ -17,6 +17,9 @@ public class Customer {
 
     private String name;
 
+    @Embedded
+    private Contact contact;
+
     @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
     private List<Address> addressList = new ArrayList<>();
 
@@ -57,12 +60,21 @@ public class Customer {
         this.name = name;
     }
 
+    public Contact getContact() {
+        return contact;
+    }
+
+    public void setContact(Contact contact) {
+        this.contact = contact;
+    }
+
     @Override
     public String toString() {
         return "Customer{" +
                 "id=" + id +
                 ", cpf='" + cpf + '\'' +
                 ", name='" + name + '\'' +
+                ", contact=" + contact +
                 ", addressList=" + addressList +
                 '}';
     }

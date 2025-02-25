@@ -1,5 +1,6 @@
 package dev.felipeazsantos.restaurant.service.test;
 
+import dev.felipeazsantos.restaurant.dao.AddressDao;
 import dev.felipeazsantos.restaurant.dao.CustomerDao;
 import dev.felipeazsantos.restaurant.dao.MenuItemDao;
 import dev.felipeazsantos.restaurant.dao.RestaurantOrderDao;
@@ -19,6 +20,7 @@ public class RestaurantOrderService {
 
         MenuItemDao menuItemDao = new MenuItemDao(entityManager);
         CustomerDao customerDao = new CustomerDao(entityManager);
+        AddressDao addressDao = new AddressDao(entityManager);
         RestaurantOrderDao restaurantOrderDao = new RestaurantOrderDao(entityManager);
 
         Address address = new Address("Rua XYZ", "SP", "São Paulo", "123", "casa", "00000-000");
@@ -31,11 +33,10 @@ public class RestaurantOrderService {
         customerDao.register(felipe);
         restaurantOrderDao.register(restaurantOrder);
 
+        System.out.println(addressDao.findCustomers("SP", "São Paulo", "rua xyz"));
+        System.out.println(addressDao.findCustomersCriteria("SP", "São Paulo", "rua xyz"));
+
         entityManager.getTransaction().commit();
-        entityManager.clear();
-
-        System.out.println(customerDao.findAllByName("fe"));
-
         entityManager.close();
     }
 }

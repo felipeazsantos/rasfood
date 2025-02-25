@@ -5,14 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7b18f7b-c62c-49ed-8bae-f9065f24b04f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/felipeazsantos/restaurant/vo/BestSellingItemsVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/felipeazsantos/restaurant/dao/AddressDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/felipeazsantos/restaurant/entity/Contact.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/felipeazsantos/restaurant/entity/CustomerId.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/felipeazsantos/restaurant/vo/CustomerVo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/felipeazsantos/restaurant/dao/CustomerDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/felipeazsantos/restaurant/dao/CustomerDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/felipeazsantos/restaurant/dao/RestaurantOrderDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/felipeazsantos/restaurant/dao/RestaurantOrderDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/felipeazsantos/restaurant/entity/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/felipeazsantos/restaurant/entity/Address.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/felipeazsantos/restaurant/entity/MenuItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/felipeazsantos/restaurant/entity/MenuItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/felipeazsantos/restaurant/entity/RestaurantOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/felipeazsantos/restaurant/entity/RestaurantOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/felipeazsantos/restaurant/entity/RestaurantOrderMenuItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/felipeazsantos/restaurant/entity/RestaurantOrderMenuItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/felipeazsantos/restaurant/entity/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/felipeazsantos/restaurant/entity/Customer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/felipeazsantos/restaurant/service/test/RestaurantOrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/felipeazsantos/restaurant/service/test/RestaurantOrderService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
