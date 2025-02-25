@@ -81,11 +81,12 @@ public class RestaurantOrder {
 
     @Override
     public String toString() {
-        return "Order{" +
+        return "RestaurantOrder{" +
                 "id=" + id +
                 ", total=" + total +
                 ", creationDate=" + creationDate +
                 ", customer=" + customer +
+                ", restaurantOrderMenuItemList=" + restaurantOrderMenuItemList +
                 '}';
     }
 }

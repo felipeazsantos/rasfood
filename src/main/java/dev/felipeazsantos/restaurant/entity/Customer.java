@@ -1,6 +1,8 @@
 package dev.felipeazsantos.restaurant.entity;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "customer")
@@ -15,15 +17,20 @@ public class Customer {
 
     private String name;
 
-    private String cep;
+    @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
+    private List<Address> addressList = new ArrayList<>();
 
     public Customer() {
     }
 
-    public Customer(String cpf, String name, String cep) {
+    public Customer(String cpf, String name) {
         this.cpf = cpf;
         this.name = name;
-        this.cep = cep;
+    }
+
+    public void addAddress(Address address) {
+        address.setCustomer(this);
+        addressList.add(address);
     }
 
     public Long getId() {
@@ -50,21 +57,13 @@ public class Customer {
         this.name = name;
     }
 
-    public String getCep() {
-        return cep;
-    }
-
-    public void setCep(String cep) {
-        this.cep = cep;
-    }
-
     @Override
     public String toString() {
         return "Customer{" +
                 "id=" + id +
                 ", cpf='" + cpf + '\'' +
                 ", name='" + name + '\'' +
-                ", cep='" + cep + '\'' +
+                ", addressList=" + addressList +
                 '}';
     }
 }

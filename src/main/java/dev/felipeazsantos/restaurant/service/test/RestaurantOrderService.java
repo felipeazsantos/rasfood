@@ -3,10 +3,7 @@ package dev.felipeazsantos.restaurant.service.test;
 import dev.felipeazsantos.restaurant.dao.CustomerDao;
 import dev.felipeazsantos.restaurant.dao.MenuItemDao;
 import dev.felipeazsantos.restaurant.dao.RestaurantOrderDao;
-import dev.felipeazsantos.restaurant.entity.Customer;
-import dev.felipeazsantos.restaurant.entity.MenuItem;
-import dev.felipeazsantos.restaurant.entity.RestaurantOrder;
-import dev.felipeazsantos.restaurant.entity.RestaurantOrderMenuItem;
+import dev.felipeazsantos.restaurant.entity.*;
 import dev.felipeazsantos.restaurant.util.DataLoadUtil;
 import dev.felipeazsantos.restaurant.util.JPAUtil;
 
@@ -26,7 +23,9 @@ public class RestaurantOrderService {
 
         MenuItem menuItem = menuItemDao.findById(1L);
 
-        Customer felipe = new Customer("11111111111", "Felipe", "00000000");
+        Address address = new Address("Rua XYZ", "SP", "São Paulo", "123", "casa", "00000-000");
+        Customer felipe = new Customer("11111111111", "Felipe");
+        felipe.addAddress(address);
         RestaurantOrder restaurantOrder = new RestaurantOrder(felipe);
         RestaurantOrderMenuItem restaurantOrderMenuItem = new RestaurantOrderMenuItem(menuItem, 10L);
         restaurantOrder.addRestaurantOrderMenuItem(restaurantOrderMenuItem);

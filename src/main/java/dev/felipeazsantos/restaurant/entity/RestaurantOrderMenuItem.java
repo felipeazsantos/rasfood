@@ -74,7 +74,6 @@ public class RestaurantOrderMenuItem {
     public String toString() {
         return "RestaurantOrderMenuItem{" +
                 "id=" + id +
-                ", restaurantOrder=" + restaurantOrder +
                 ", menuItem=" + menuItem +
                 ", price=" + price +
                 ", quantity=" + quantity +
