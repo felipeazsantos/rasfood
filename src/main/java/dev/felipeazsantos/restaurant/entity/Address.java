@@ -111,7 +111,6 @@ public class Address {
                 ", quarter='" + quarter + '\'' +
                 ", complement='" + complement + '\'' +
                 ", cep='" + cep + '\'' +
-                ", customer=" + customer +
                 '}';
     }
 }

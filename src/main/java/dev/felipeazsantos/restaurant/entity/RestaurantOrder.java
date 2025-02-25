@@ -16,7 +16,7 @@ public class RestaurantOrder {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private BigDecimal total;
+    private BigDecimal total = BigDecimal.ZERO;
 
     @CreationTimestamp
     private LocalDateTime creationDate = LocalDateTime.now();
@@ -36,6 +36,8 @@ public class RestaurantOrder {
 
     public void addRestaurantOrderMenuItem(RestaurantOrderMenuItem restaurantOrderMenuItem) {
         restaurantOrderMenuItem.setRestaurantOrder(this);
+        this.total = this.total.add(restaurantOrderMenuItem.getPrice()
+                .multiply(BigDecimal.valueOf(restaurantOrderMenuItem.getQuantity())));
         this.restaurantOrderMenuItemList.add(restaurantOrderMenuItem);
     }
 

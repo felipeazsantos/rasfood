@@ -21,17 +21,16 @@ public class RestaurantOrderService {
         CustomerDao customerDao = new CustomerDao(entityManager);
         RestaurantOrderDao restaurantOrderDao = new RestaurantOrderDao(entityManager);
 
-        MenuItem menuItem = menuItemDao.findById(1L);
-
         Address address = new Address("Rua XYZ", "SP", "São Paulo", "123", "casa", "00000-000");
         Customer felipe = new Customer("11111111111", "Felipe");
         felipe.addAddress(address);
         RestaurantOrder restaurantOrder = new RestaurantOrder(felipe);
-        RestaurantOrderMenuItem restaurantOrderMenuItem = new RestaurantOrderMenuItem(menuItem, 10L);
-        restaurantOrder.addRestaurantOrderMenuItem(restaurantOrderMenuItem);
+        restaurantOrder.addRestaurantOrderMenuItem(new RestaurantOrderMenuItem(menuItemDao.findById(1L), 10L));
+        restaurantOrder.addRestaurantOrderMenuItem(new RestaurantOrderMenuItem(menuItemDao.findById(2L), 5L));
 
         customerDao.register(felipe);
         restaurantOrderDao.register(restaurantOrder);
+        System.out.println(restaurantOrder);
         entityManager.getTransaction().commit();
         entityManager.close();
     }
