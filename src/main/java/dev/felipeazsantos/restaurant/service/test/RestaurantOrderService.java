@@ -30,8 +30,12 @@ public class RestaurantOrderService {
 
         customerDao.register(felipe);
         restaurantOrderDao.register(restaurantOrder);
-        System.out.println(restaurantOrder);
+
         entityManager.getTransaction().commit();
+        entityManager.clear();
+
+        System.out.println(customerDao.findAllByName("fe"));
+
         entityManager.close();
     }
 }

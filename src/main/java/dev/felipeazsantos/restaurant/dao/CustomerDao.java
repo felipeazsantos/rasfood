@@ -29,8 +29,18 @@ public class CustomerDao {
 
     public List<Customer> findAll() {
         try {
-            String jpql = "SELECT c FROM customer c";
+            String jpql = "SELECT c FROM Customer c";
             return this.entityManager.createQuery(jpql, Customer.class).getResultList();
+        } catch (Exception ex) {
+            System.out.println(ex.getLocalizedMessage());
+            return Collections.emptyList();
+        }
+    }
+
+    public List<Customer> findAllByName(final String name) {
+        try {
+            String jpql = "SELECT c FROM Customer c WHERE LOWER(c.name) like LOWER(:name)";
+            return this.entityManager.createQuery(jpql, Customer.class).setParameter("name", "%"+ name + "%").getResultList();
         } catch (Exception ex) {
             System.out.println(ex.getLocalizedMessage());
             return Collections.emptyList();

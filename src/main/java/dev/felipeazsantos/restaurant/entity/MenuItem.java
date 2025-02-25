@@ -20,7 +20,7 @@ public class MenuItem {
     private Boolean available;
     private BigDecimal price;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private Category category;
 
     @CreationTimestamp

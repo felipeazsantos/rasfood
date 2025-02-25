@@ -1,6 +1,7 @@
 package dev.felipeazsantos.restaurant.entity;
 
 import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.Fetch;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
@@ -21,7 +22,7 @@ public class RestaurantOrder {
     @CreationTimestamp
     private LocalDateTime creationDate = LocalDateTime.now();
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private Customer customer;
 
     @OneToMany(mappedBy = "restaurantOrder", cascade = CascadeType.ALL)

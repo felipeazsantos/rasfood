@@ -11,10 +11,10 @@ public class RestaurantOrderMenuItem {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private RestaurantOrder restaurantOrder;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private MenuItem menuItem;
 
     private BigDecimal price;

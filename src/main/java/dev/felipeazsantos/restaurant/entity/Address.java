@@ -22,7 +22,7 @@ public class Address {
 
     private String cep;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private Customer customer;
 
     public Address() {
